@@ -45,6 +45,13 @@ img{
   height: auto;  /*  чтоб картинка не расятягивалась/не сужалась, чтобы высота неменялас пропорционально ширине*/
 }
 
+p{
+  margin: 0;
+}
+
+h1, h2, h3{
+  margin: 0;
+}
 
 .container{
   max-width: 1400px; /* 1300+(padding-left + padding-right)*/
@@ -127,97 +134,132 @@ img{
 .promo__title {
   max-width: 788px;
   margin-bottom: 60px;
+  margin-top: 0;
   font-weight: 400;
   font-size: 88px;
   line-height: 1.1;
   
 }
 
-.promo __link {
+.promo__link {
+  display: inline-block;
+  padding: 16px 24px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+
+.products{
+  padding: 100px 0;
+}
+
+.products__container {
+}
+
+.products__title {
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 1.1;
+  color: #64099b;
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 
 
-.products {
-
-  &__container {
-  }
-
-  &__title {
-  }
-
-  &__content {
-  }
-
-  &__item {
-  }
-}
 
 
 .product {
-
-  &__image {
-  }
-
-  &__title {
-  }
-
-  &__price {
-  }
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  /* padding: 24px; */
+  background-color: #f2f9f7;
+  font-size: 0;  /* чтобы убрать нижний оступ у картинки */
+  color: #1d1c1d;
 }
+
+.product__image {
+  width: 100%;
+}
+
+.product__content{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* бует занимтаь все оставшее простанство */ 
+  padding: 40px 24px 24px 24px;
+}
+
+.product__title {
+  flex-grow: 1; /* бует занимтаь все оставшее простанство */ 
+  margin-bottom: 4px;
+  font-size: 24px;
+}
+
+.product__price {
+  font-size: 20px;
+}
+
 
 
 .footer {
 
-  &__container {
-  }
-
-  &__logo-link {
-  }
-
-  &__logo {
-  }
-
-  &__nav {
-  }
-
-  &__menu {
-  }
-
-  &__menu-item {
-  }
-
-  &__menu-link {
-  }
-
-  &__info {
-  }
-
-  &__copyright {
-  }
-
-  &__developers {
-  }
-
-  &__developer {
-  }
-
-  &__developer-link {
-  }
-
-  &__contacts {
-  }
-
-  &__email {
-  }
-
-  &__social {
-  }
-
-  &__social-item {
-  }
-
-  &__social-link {
-  }
 }
+
+.footer__container {
+  }
+
+  .footer__logo-link {
+  }
+
+  .footer__logo {
+  }
+
+  .footer__nav {
+  }
+
+  .footer__menu {
+  }
+
+  .footer__menu-item {
+  }
+
+  .footer__menu-link {
+  }
+
+  .footer__info {
+  }
+
+  .footer__copyright {
+  }
+
+  .footer__developers {
+  }
+
+  .footer__developer {
+  }
+
+  .footer__developer-link {
+  }
+
+  .footer__contacts {
+  }
+
+  .footer__email {
+  }
+
+  .footer__social {
+  }
+
+  .footer__social-item {
+  }
+
+  .footer__social-link {
+  }
+
 
