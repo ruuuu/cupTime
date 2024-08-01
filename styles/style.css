@@ -6,3 +6,218 @@
   font-weight: 400;
   src: url('../fonts/inter-v13-cyrillic_latin-regular.woff2') format('woff2'); 
 }
+
+
+html{
+  box-sizing: border-box;   /*  наследуется от родиеля(html) */
+  
+}
+
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+body{
+  font-family: "Inter", sans-serif; /* если Inter не подгрузится, то загрузится какойнибудь(системный) из семества sans-serif  */
+  background-color: #fff;
+  font-size: 20px;
+  line-height: 1.24;
+  color: #1d1c1d;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none; 
+  color: inherit;
+}
+
+
+img{
+  max-width: 100%;    /* чтоб картинка ен выпаадла из блока родителя */
+  height: auto;  /*  чтоб картинка не расятягивалась/не сужалась, чтобы высота неменялас пропорционально ширине*/
+}
+
+
+.container{
+  max-width: 1400px; /* 1300+(padding-left + padding-right)*/
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+
+.header{
+  width: 100%;
+  padding: 0 24px;
+  position: absolute;
+  top: 24px;
+  left: 50%;          /*  margin: 0 auto не сработает тк абсолютное позици-ие, поэтому юзаем  свойсвтва left и transform  */
+  transform: translateX(-50%); 
+  color: #fff;
+}
+
+
+.header__container{
+  max-width: 1392px;  /* ширина контента */
+  padding: 12px 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(60px);
+  background: rgba(108, 185, 171, 0.7);
+}
+
+
+.header __logo-link {
+    font-size: 0;  /* чтобы  у .svg убрать нижнюю полоску */
+}
+
+.header__logo {
+}
+
+.header__nav {
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.header__menu-item {
+}
+
+.header__menu-link {
+    
+}
+
+.header__cart-link {
+    width: 28px;
+    height: 28px;
+    color: #64099b;
+    font-size: 12px;
+    background-image: url('/img/bag.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 10px 4px 3px; /* чтобы отцентровать цифру */
+}
+
+
+.promo{
+  background-color: #6cb9ab;
+  color: #fff;
+}
+
+.promo__container {
+    padding-top: 210px;
+    padding-bottom: 80px;
+    background-image: url('/img/hero.png');
+    background-position: right 183px bottom 0;
+    background-repeat: no-repeat;
+}
+
+.promo__title {
+  max-width: 788px;
+  margin-bottom: 60px;
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 1.1;
+  
+}
+
+.promo __link {
+}
+
+
+
+.products {
+
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__content {
+  }
+
+  &__item {
+  }
+}
+
+
+.product {
+
+  &__image {
+  }
+
+  &__title {
+  }
+
+  &__price {
+  }
+}
+
+
+.footer {
+
+  &__container {
+  }
+
+  &__logo-link {
+  }
+
+  &__logo {
+  }
+
+  &__nav {
+  }
+
+  &__menu {
+  }
+
+  &__menu-item {
+  }
+
+  &__menu-link {
+  }
+
+  &__info {
+  }
+
+  &__copyright {
+  }
+
+  &__developers {
+  }
+
+  &__developer {
+  }
+
+  &__developer-link {
+  }
+
+  &__contacts {
+  }
+
+  &__email {
+  }
+
+  &__social {
+  }
+
+  &__social-item {
+  }
+
+  &__social-link {
+  }
+}
+
