@@ -196,9 +196,14 @@ h1, h2, h3{
 }
 
 .product__title {
-  flex-grow: 1; /* бует занимтаь все оставшее простанство */ 
+  flex-grow: 1;     /* бует занимтаь все оставшее простанство */ 
   margin-bottom: 4px;
   font-size: 24px;
+  overflow: hidden;  /* все что не вместится обрежется */
+  text-overflow: ellipsis; /* многоточия */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 2 строки только будут отображаться  */
+  -webkit-box-orient: vertical;
 }
 
 .product__price {
@@ -208,58 +213,73 @@ h1, h2, h3{
 
 
 .footer {
-
+  padding: 60px 0;
+  background-color:  #6cb9ab;
+  color: #fff;
 }
 
 .footer__container {
+  display: grid;
+  grid-template-columns: repeat(2, max-content); /* ширина колонки будет зависеть от контента */
+  justify-content: space-between;
+  gap: 38px; 
+}
+
+.footer__logo-link {
   }
 
-  .footer__logo-link {
+.footer__logo {
   }
 
-  .footer__logo {
+.footer__nav {
   }
 
-  .footer__nav {
+.footer__menu {
+  display: flex;
+  gap: 50px;
   }
 
-  .footer__menu {
+.footer__menu-item {
   }
 
-  .footer__menu-item {
+.footer__menu-link {
   }
 
-  .footer__menu-link {
+.footer__info {
   }
 
-  .footer__info {
+.footer__copyright {
+  margin-bottom: 16px;
   }
 
-  .footer__copyright {
+.footer__developers {
   }
 
-  .footer__developers {
+.footer__developer {
   }
 
-  .footer__developer {
+.footer__developer-link {
   }
 
-  .footer__developer-link {
+.footer__contacts { /* грид элемент */
+  align-self: end;
+}
+
+.footer__email {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__social-item {
   }
 
-  .footer__contacts {
-  }
-
-  .footer__email {
-  }
-
-  .footer__social {
-  }
-
-  .footer__social-item {
-  }
-
-  .footer__social-link {
+.footer__social-link {
   }
 
 
